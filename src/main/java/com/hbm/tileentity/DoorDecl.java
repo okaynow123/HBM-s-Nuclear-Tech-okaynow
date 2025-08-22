@@ -367,7 +367,7 @@ public abstract class DoorDecl {
 
 		@Override
 		public String getOpenSoundEnd() {
-			return "hbm:null";
+			return null;
 		}
 
 		@Override
