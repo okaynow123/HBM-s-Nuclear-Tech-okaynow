@@ -6098,6 +6098,7 @@ tile.qe_sliding_door.name=QE Розсувні двері
 tile.round_airlock_door.name=Круглі двері гідрошлюзу
 tile.secure_access_door.name=Двері доступу персоналу
 tile.sliding_seal_door.name=Розсувні герметичні двері
+tile.sliding_gate_door.name=Small QE Containment Door
 
 trait.asbestos=Азбест
 trait.blinding=Засліплення

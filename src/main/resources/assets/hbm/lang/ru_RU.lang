@@ -6403,6 +6403,7 @@ tile.qe_sliding_door.name=QE Раздвижная дверь
 tile.round_airlock_door.name=Круглый шлюз
 tile.secure_access_door.name=Дверь с изолированным доступом
 tile.sliding_seal_door.name=Раздвижная герметичная дверь
+tile.sliding_gate_door.name=Small QE Containment Door
 
 trait.asbestos=Содержит асбест
 trait.blinding=Ослепление

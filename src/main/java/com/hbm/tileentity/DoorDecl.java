@@ -283,11 +283,91 @@ public abstract class DoorDecl {
 		}
 	};
 
-	public static final DoorDecl SLIDING_SEAL_DOOR = new DoorDecl() {
+	public static final DoorDecl SLIDING_GATE_DOOR = new DoorDecl() {
 
 		@Override
 		public String getOpenSoundEnd() {
 			return "hbm:door.sliding_seal_stop";
+		}
+
+		@Override
+		public String getOpenSoundStart() {
+			return "hbm:door.sliding_seal_open";
+		}
+
+		public float getSoundVolume() {
+			return 3;
+		}
+
+		@Override
+		@SideOnly(Side.CLIENT)
+		public void getTranslation(String partName, float openTicks, boolean child, float[] trans) {
+			if(partName.startsWith("door")) {
+				set(trans, 0, 0, Library.smoothstep(getNormTime(openTicks), 0, 1));
+			} else {
+				set(trans, 0, 0, 0);
+			}
+		};
+
+		@Override
+		@SideOnly(Side.CLIENT)
+		public double[][] getClippingPlanes() {
+			return new double[][] { { 0, 0, -1, 0.5001 } };
+		};
+
+		@Override
+		@SideOnly(Side.CLIENT)
+		public void doOffsetTransform() {
+			GL11.glTranslated(0.375, 0, 0);
+		};
+
+		@Override
+		public int timeToOpen() {
+			return 28;
+		};
+
+		@Override
+		public AxisAlignedBB getBlockBound(int x, int y, int z, boolean open, boolean forCollision) {
+			if(forCollision && open) {
+				return AxisAlignedBB.getBoundingBox(0, 0, 0, 0, 0, 0);
+			} else {
+				return AxisAlignedBB.getBoundingBox(0, 0, 1 - 0.25, 1, 1, 1);
+			}
+		};
+
+		@Override
+		public int[][] getDoorOpenRanges() {
+			return new int[][] { { 0, 0, 0, 1, 2, 2 } };
+		}
+
+		@Override
+		public int[] getDimensions() {
+			return new int[] { 1, 0, 0, 0, 0, 0 };
+		}
+
+		@Override
+		@SideOnly(Side.CLIENT)
+		public ResourceLocation getTextureForPart(String partName) {
+			return ResourceManager.sliding_gate_door_tex;
+		}
+
+		@Override
+		public ResourceLocation getTextureForPart(int skinIndex, String partName) {
+			return ResourceManager.sliding_gate_door_tex;
+		}
+
+		@Override
+		@SideOnly(Side.CLIENT)
+		public IModelCustomNamed getModel() {
+			return ResourceManager.sliding_seal_door;
+		}
+	};
+
+	public static final DoorDecl SLIDING_SEAL_DOOR = new DoorDecl() {
+
+		@Override
+		public String getOpenSoundEnd() {
+			return "hbm:null";
 		}
 
 		@Override
@@ -361,7 +441,7 @@ public abstract class DoorDecl {
 		public IModelCustomNamed getModel() {
 			return ResourceManager.sliding_seal_door;
 		}
-	};
+	};	
 
 	public static final DoorDecl SECURE_ACCESS_DOOR = new DoorDecl() {
 

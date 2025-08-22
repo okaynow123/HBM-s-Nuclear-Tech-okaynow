@@ -597,6 +597,7 @@ public class ModBlocks {
 	public static Block qe_sliding_door;
 	public static Block round_airlock_door;
 	public static Block sliding_seal_door;
+	public static Block sliding_gate_door;
 	public static Block water_door;
 
 	public static Block door_metal;
@@ -2095,6 +2096,7 @@ public class ModBlocks {
 		qe_sliding_door = new BlockDoorGeneric(Material.iron, DoorDecl.QE_SLIDING).setBlockName("qe_sliding_door").setHardness(10.0F).setResistance(1_000.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		round_airlock_door = new BlockDoorGeneric(Material.iron, DoorDecl.ROUND_AIRLOCK_DOOR).setBlockName("round_airlock_door").setHardness(10.0F).setResistance(1_000.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		sliding_seal_door = new BlockDoorGeneric(Material.iron, DoorDecl.SLIDING_SEAL_DOOR).setBlockName("sliding_seal_door").setHardness(10.0F).setResistance(1_000.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
+		sliding_gate_door = new BlockDoorGeneric(Material.iron, DoorDecl.SLIDING_GATE_DOOR).setBlockName("sliding_gate_door").setHardness(10.0F).setResistance(1_000.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		water_door = new BlockDoorGeneric(Material.iron, DoorDecl.WATER_DOOR).setBlockName("water_door").setHardness(5.0F).setResistance(50.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 
 		door_metal = new BlockModDoor(Material.iron).setBlockName("door_metal").setHardness(5.0F).setResistance(5.0F).setBlockTextureName(RefStrings.MODID + ":door_metal");
@@ -3034,6 +3036,7 @@ public class ModBlocks {
 		GameRegistry.registerBlock(qe_sliding_door, qe_sliding_door.getUnlocalizedName());
 		GameRegistry.registerBlock(round_airlock_door, round_airlock_door.getUnlocalizedName());
 		GameRegistry.registerBlock(sliding_seal_door, sliding_seal_door.getUnlocalizedName());
+		GameRegistry.registerBlock(sliding_gate_door, sliding_gate_door.getUnlocalizedName());
 		GameRegistry.registerBlock(water_door, water_door.getUnlocalizedName());
 
 		//Crates

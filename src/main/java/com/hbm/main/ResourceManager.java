@@ -341,6 +341,7 @@ public class ResourceManager {
 	public static IModelCustomNamed water_door = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/doors/water_door.obj")).asVBO();
 
 	public static final ResourceLocation sliding_seal_door_tex = new ResourceLocation(RefStrings.MODID, "textures/models/doors/sliding_seal_door.png");
+	public static final ResourceLocation sliding_gate_door_tex = new ResourceLocation(RefStrings.MODID, "textures/models/doors/sliding_gate_door.png");
 	public static IModelCustomNamed sliding_seal_door = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/doors/sliding_seal_door.obj")).asVBO();
 
 	public static final ResourceLocation round_airlock_door_tex = new ResourceLocation(RefStrings.MODID, "textures/models/doors/round_airlock_door.png");
