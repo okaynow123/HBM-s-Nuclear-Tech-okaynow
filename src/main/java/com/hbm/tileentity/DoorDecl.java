@@ -376,7 +376,7 @@ public abstract class DoorDecl {
 		}
 
 		public float getSoundVolume() {
-			return 2;
+			return 1;
 		}
 
 		@Override
@@ -403,7 +403,7 @@ public abstract class DoorDecl {
 
 		@Override
 		public int timeToOpen() {
-			return 20;
+			return 15;
 		};
 
 		@Override
