@@ -362,6 +362,10 @@ public class ResourceManager {
 	public static final ResourceLocation silo_hatch_large_tex = new ResourceLocation(RefStrings.MODID, "textures/models/doors/silo_hatch_large.png");
 	public static IModelCustomNamed silo_hatch_large = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/doors/silo_hatch_large.obj")).asVBO();
 
+	//Red Ladder
+	public static final ResourceLocation ladder_red_tex = new ResourceLocation(RefStrings.MODID, "textures/blocks/ladder_red.png");
+	public static IModelCustomNamed ladder_red = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/blocks/red_ladder.obj")).asVBO();
+	public static IModelCustomNamed ladder_red_top = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/blocks/red_ladder_top.obj")).asVBO();
 
 	//Skeleton
 	public static final IModelCustom skeleton_holder = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/blocks/skeleton_holder.obj"),false).asVBO();
