@@ -364,8 +364,8 @@ public class ResourceManager {
 
 	//Red Ladder
 	public static final ResourceLocation ladder_red_tex = new ResourceLocation(RefStrings.MODID, "textures/blocks/ladder_red.png");
-	public static IModelCustomNamed ladder_red = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/blocks/red_ladder.obj")).asVBO();
-	public static IModelCustomNamed ladder_red_top = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/blocks/red_ladder_top.obj")).asVBO();
+	public static final IModelCustom ladder_red_block = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/blocks/red_ladder.obj"));
+	public static final IModelCustom ladder_red_top_block = AdvancedModelLoader.loadModel(new ResourceLocation(RefStrings.MODID, "models/blocks/red_ladder_top.obj"));
 
 	//Skeleton
 	public static final IModelCustom skeleton_holder = new HFRWavefrontObject(new ResourceLocation(RefStrings.MODID, "models/blocks/skeleton_holder.obj"),false).asVBO();
