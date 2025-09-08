@@ -848,6 +848,8 @@ public class ClientProxy extends ServerProxy {
 		RenderingRegistry.registerBlockHandler(new RenderPribris());
 
 		RenderingRegistry.registerBlockHandler(new RenderBlockWand());
+
+		RenderingRegistry.registerBlockHandler(new RenderRedLadder());
 	}
 
 	@Override
